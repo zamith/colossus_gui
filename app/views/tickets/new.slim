@@ -1,0 +1,18 @@
+= form_for @ticket do |form|
+  .input
+    = form.label :pool_id, "Pool ID"
+    = form.number_field :pool_id
+
+  .input
+    = form.label :selections, "Selections"
+    = form.text_field :selections, placeholder: "Separate selections with a comma"
+
+  .input
+    = form.label :stake
+    = form.text_field :stake
+
+  .input
+    = form.label :cost
+    = form.text_field :cost
+
+  = form.submit

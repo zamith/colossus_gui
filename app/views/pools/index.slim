@@ -1,0 +1,13 @@
+h1 Pools
+
+ul
+  - @pool_groups.each do |pool_group|
+    li
+      p = pool_group.name
+      ul
+        - pool_group.pools.each do |pool|
+          li
+            p = pool.id
+            p = pool.selections
+            p = pool.name
+            p = pool.status

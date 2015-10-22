@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+# Set up Rails app. Run this script immediately after cloning the codebase.
+# https://github.com/thoughtbot/guides/tree/master/protocol
+
+# Exit if any subcommand fails
+set -e
+
+# Set up Ruby dependencies via Bundler
+bundle check || bundle install
+
+# Add binstubs to PATH via export PATH=".git/safe/../../bin:$PATH" in ~/.zshenv
+mkdir -p .git/safe
+
+bundle exec rake db:setup
+bundle exec rake db:test:prepare
+bundle exec rake dev:setup
