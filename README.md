@@ -8,18 +8,14 @@ This repository comes equipped with a self-setup script:
 
     % ./bin/setup
 
-After setting up, you can run the application using [foreman]:
+Next you need to add credentials to a `.env` file, like so:
 
-    % foreman start
+```
+API_KEY="your-api-key"
+API_SECRET="your-api-secret"
+```
 
-[foreman]: http://ddollar.github.io/foreman/
+After setting up, you can run the application using another script:
 
-Guidelines
-----------
+    % ./bin/server
 
-Use the following guides for getting things done, programming well, and
-programming in style.
-
-* [Protocol](http://github.com/thoughtbot/guides/blob/master/protocol)
-* [Best Practices](http://github.com/thoughtbot/guides/blob/master/best-practices)
-* [Style](http://github.com/thoughtbot/guides/blob/master/style)
